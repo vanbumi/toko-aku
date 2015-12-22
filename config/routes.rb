@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'original' => 'original#index'
+
   get 'store/index'
 
   resources :products
