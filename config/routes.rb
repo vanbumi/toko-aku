@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :line_items
+  resources :carts
   get 'original' => 'original#index'
 
   get 'store/index'

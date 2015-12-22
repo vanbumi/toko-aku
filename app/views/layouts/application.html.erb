@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	  <title>Tokomedio</title>
+	  <title>Toko Aku | Harga Murah & Terpercaya</title>
 	  <%= stylesheet_link_tag    'application', media: 'all' %>
 	  <%= javascript_include_tag 'application' %>
 	  <%= csrf_meta_tags %>
@@ -23,7 +23,11 @@
     <link href="/store/css/shop-homepage.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="<%= controller.controller_name %>">
+	<div id="banner">
+		<%= image_tag("logo.png") %>
+		<%= @page_title || "Toko Aku" %>
+	</div>
 
 <%= yield %>
 
