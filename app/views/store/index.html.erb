@@ -111,9 +111,10 @@
                             <img src="<%= product.image_url %>" alt="">
                             <div class="caption">
                                 <h4 class="pull-right"><%= number_to_currency(product.price, precision: 0, unit: "Rp. ", separator: "", delimiter: ".") %></h4><br>
-                                <h4><a href="#"><%= product.name %></a>
-                                </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <h4><a href="#"><%= product.name %></a></h4>
+                                <p><%= strip_tags(product.description)[0..100] %>.. <i><strong>Lihat</strong></i></p>
+                                <!-- <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p> -->
+                                <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
